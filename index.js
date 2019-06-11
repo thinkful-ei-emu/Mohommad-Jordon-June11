@@ -9,6 +9,12 @@ function handleNewSubmit(){
   })
 }
 
+function displayResults(responseJson){
+    responseJson.message.forEach(function(element){
+        $('results').append(`<img src="${element} class="results-img"`);
+    })
+}
+
 function getDogImage(num) {
   fetch(`https://dog.ceo/api/breeds/image/random/${num}`)
     .then(response => response.json())
