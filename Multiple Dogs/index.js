@@ -10,23 +10,13 @@ function handleNewSubmit(){
   });
 }
 
-// function displayResults(responseJson) {
-//   console.log(responseJson);
-//   //replace the existing image with the new one
-//   $('.results-img').replaceWith(
-//     `<img src="${responseJson.message}" class="results-img">`
-//   )
-//   //display the results section
-//   $('.results').removeClass('hidden');
-// }
-
 function displayImages(responseJson, num){
-  $('.results').html(''); // 
+  $('.results').html('');
   console.log(responseJson);
   console.log(`user wants us to display ${num} images`);
   for(let i = 0; i < num; i++){
     console.log(`${responseJson.message[i]}`);
-    $('.results').append(`<img src = "${responseJson.message[i]}">`);
+    $('.results').append(`<img src ="${responseJson.message[i]}">`);
   }
 
 
@@ -46,12 +36,3 @@ $(function() {
   console.log('App loaded! Waiting for submit!');
   handleNewSubmit();
 });
-
-
-
-//display 3 random dog images
-//https://dog.ceo/api/breeds/image/random/3 Fetch!
-
-
-//form for input # of dog images
-//store input as variable

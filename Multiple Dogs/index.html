@@ -10,16 +10,15 @@
 </head>
 <body>
     <div class="container">
-        <h1>Dog API: A Simple Example</h1>
+        <h1>Dog Pictures</h1>
 
         <form id="dog-search-form">
-            <label for="number-of-dogs">How many dog images?</label>
-          <input type="text" name="number-of-dogs" class="js-dog-search-entry" placeholder="1 - 50">
+            <label for="number-of-dogs">How many dog images? </label>
+          <input type="number" name="number-of-dogs" class="js-dog-search-entry" min="1" max="50">
           <button type="submit">Submit</button>
         </form>
         <section class="results">
-          <h2>Look at this dog!</h2>
-          <img class="results-img" alt="placeholder">
+          <img class="results-img">
         </section>
     </div>
     <script src="index.js"></script>
